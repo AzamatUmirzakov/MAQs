@@ -1,0 +1,88 @@
+$image-bg-gradient-start: #84EEEB;
+$image-bg-gradient-end: #CCD1FF;
+
+section.message {
+  padding-bottom: 100px;
+  padding-top: 180px;
+  div.message-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+div.message-image {
+  display: inline-block;
+  position: relative;
+  :not(.director-image) {
+    position: absolute;
+  }
+  .director-image {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+  }
+  .gradient-block {
+    top: -80px;
+    left: 80px;
+    z-index: 1;
+  }
+  .white-grid {
+    right: -40px;
+    top: -40px;
+    z-index: 2;
+  }
+}
+
+div.message-text {
+  display: inline-block;
+  max-width: 500px;
+  h1 {
+    font: {
+      family: "Roboto Regular";
+      size: 2em;
+      weight: normal;
+    }
+    margin-bottom: 25px;
+    line-height: 1.3;
+  }
+  .hi-p {
+    font: {
+      family: "Roboto Regular";
+      size: 1.125em;
+    }
+    line-height: 1.39;
+    margin-bottom: 12px;
+  }
+  .customer-p {
+    font: {
+      family: "Roboto Regular";
+      size: 0.875em;
+    }
+    line-height: 1.4;
+    opacity: 0.5;
+    margin-bottom: 25px;
+  }
+  .read-more-link {
+    @extend %gradient-text;
+    font: {
+      family: "Roboto Regular";
+      size: 1em;
+    }
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      width: 100%;
+      height: 2px;
+      background-image: linear-gradient(90deg, $image-bg-gradient-start, $image-bg-gradient-end);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}

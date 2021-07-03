@@ -1,0 +1,117 @@
+header.page-header {
+  padding: 40px;
+}
+
+div.header-inside {
+  display: flex;
+  align-items: center;
+}
+
+div.header-logo > a {
+  font-family: "Product Sans Bold";
+  text-decoration: none;
+  background-image: linear-gradient(
+    90deg,
+    var(--turqoise-color),
+    var(--malibu-color)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.625em;
+  line-height: 32px;
+}
+
+nav.header-nav {
+  margin-left: 50px;
+  margin-right: 300px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.header-nav > a,
+button {
+  font-family: "Roboto";
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  line-height: 15px;
+  color: black;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+}
+
+nav.header-nav > a:hover {
+  text-decoration: underline;
+}
+
+div.dropdown {
+  position: relative;
+}
+
+div.dropdown > button {
+  display: inline-flex;
+  align-items: center;
+  outline: none;
+}
+
+div.dropdown > button > i {
+  margin-left: 5px;
+}
+
+div.dropdown-items {
+  position: absolute;
+  /* top: 108.57%; */
+  display: none;
+  width: 100%;
+  opacity: 0;
+}
+
+div.dropdown:hover > div.dropdown-items {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  box-shadow: 0px 5px 10px rgba(204, 204, 204, 0.5);
+}
+
+div.dropdown-items > a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Roboto";
+  width: 100%;
+  font-size: 0.8125em;
+  text-align: center;
+  padding: 10px 0;
+  color: #000;
+  border: 1px solid transparent;
+}
+
+div.dropdown-items > a:hover {
+  border-color: #000;
+  text-decoration: underline;
+}
+
+div.header-login {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.header-login > p {
+  font-family: "Roboto";
+  font-size: 0.875em;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  width: 140px;
+  justify-content: space-between;
+}
+
+div.header-login > p > i {
+  color: #00cec8;
+}

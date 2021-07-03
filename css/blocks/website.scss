@@ -1,0 +1,72 @@
+$website-gradient-start: #FFFCEB;
+$website-gradient-end: #EAFFFE;
+
+section.website-design {
+  background-image: linear-gradient(90deg, $website-gradient-start, $website-gradient-end);
+  padding-top: 50px;
+  padding-bottom: 150px;
+  div.website-design-inside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+div.website-design-text {
+  max-width: 400px;
+  h1 {
+    font: {
+      family: "Product Sans Regular";
+      size: 3.5em;
+    };
+    line-height: 68px;
+    margin-bottom: 25px;
+  }
+  p {
+    font: {
+      family: "Roboto Regular";
+      size: 1.125em;
+    }
+    line-height: 25px;
+    margin-bottom: 60px;
+  }
+  a {
+    @extend %gradient-button;
+  }
+}
+
+div.website-design-image {
+  position: relative;
+  :not(.main-image) {
+    position: absolute;
+  }
+  .main-image {
+    z-index: 2;
+    position: relative;
+  }
+  .turqoise-grid {
+    top: 90%;
+    left: 90%;
+  }
+  .turqoise-zigzag {
+    top: 70%;
+    left: -10%;
+  }
+  .marzipan-grid {
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+  }
+  .marzipan-zigzag {
+    top: 72%;
+    left: -12%;
+  }
+  .malibu-x {
+    top: 55%;
+    left: -10%;
+  }
+  .malibu-circle {
+    top: 55%;
+    right: -10%;
+  }
+}

@@ -1,0 +1,80 @@
+$gradient-start: #3ae4df;
+$gradient-end: #7a88ff;
+$gradient-button-text: #fff;
+
+@font-face {
+  font-family: "Product Sans Regular";
+  src: url("../fonts/product-sans/Product Sans Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+}
+
+.center {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+%gradient-text {
+  background-image: linear-gradient(90deg, $gradient-start, $gradient-end);
+  text-decoration: none;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+%gradient-button {
+  display: inline-block;
+  border-radius: 5px;
+  color: $gradient-button-text;
+  background-image: linear-gradient(90deg, $gradient-start, $gradient-end);
+  padding: 12px 25px;
+  border: none;
+  font-family: "Roboto Regular";
+  text-decoration: none;
+  &:hover {
+    -webkit-animation-name: heart-beat;
+    animation-name: heart-beat;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+}
+
+@-webkit-keyframes heart-beat {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

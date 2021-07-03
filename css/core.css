@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+:root {
+  --turqoise-color: #3ae4df;
+  --malibu-color: #7a88ff;
+}
+
+body {
+  font-size: 100%;
+}
+
+.center {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.gradient-button {
+  background: linear-gradient(
+    90deg,
+    var(--turqoise-color),
+    var(--malibu-color)
+  );
+  padding: 12px 30px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 0.875em;
+  line-height: 16px;
+  border-radius: 5px;
+}
+
+.gradient-button:hover {
+  transform: rotateY(360deg);
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("../fonts/product-sans/Product\ Sans\ Regular.ttf");
+}
+
+@font-face {
+  font-family: "Product Sans Bold";
+  src: url("../fonts/product-sans/Product\ Sans\ Bold.ttf");
+}
+
+@font-face {
+  font-family: "Product Sans Bold Italic";
+  src: url("../fonts/product-sans/Product\ Sans\ Bold\ Italic.ttf");
+}
+
+@font-face {
+  font-family: "Product Sans Italic";
+  src: url("../fonts/product-sans/Product\ Sans\ Italic.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}

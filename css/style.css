@@ -1,0 +1,437 @@
+@font-face {
+  font-family: "Product Sans Regular";
+  src: url("../fonts/product-sans/Product Sans Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+}
+
+.center {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+div.message-text .read-more-link, div.header-logo a {
+  background-image: linear-gradient(90deg, #3ae4df, #7a88ff);
+  text-decoration: none;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+div.training-course a.details-link, div.website-design-text a, div.header-certificate a.login-button {
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  background-image: linear-gradient(90deg, #3ae4df, #7a88ff);
+  padding: 12px 25px;
+  border: none;
+  font-family: "Roboto Regular";
+  text-decoration: none;
+}
+div.training-course a.details-link:hover, div.website-design-text a:hover, div.header-certificate a.login-button:hover {
+  -webkit-animation-name: heart-beat;
+  animation-name: heart-beat;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes heart-beat {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 1325px) {
+  .center {
+    max-width: 1250px;
+  }
+
+  nav.header-nav a {
+    font-size: 0.875em;
+  }
+
+  header.course-theme {
+    width: 200px !important;
+    height: 220px !important;
+  }
+}
+@media (max-width: 1080px) {
+  div.page-header-inside {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav.header-nav {
+    width: 100% !important;
+  }
+
+  div.header-certificate {
+    width: 100% !important;
+    justify-content: space-around !important;
+    text-align: center;
+  }
+
+  div.website-design-inside {
+    padding: 0 50px;
+  }
+  div.website-design-inside div.website-design-text h1 {
+    font-size: 2em;
+    line-height: 1.3;
+  }
+  div.website-design-inside div.website-design-text p {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  div.website-design-inside img.main-image {
+    transform: scale(0.7);
+  }
+
+  div.training-courses {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 970px) {
+  div.website-design-text h1 {
+    font-size: 1.5em !important;
+    width: 300px;
+  }
+  div.website-design-text p {
+    font-size: 0.8em !important;
+    line-height: 1.3 !important;
+  }
+
+  img.gradient-block {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  div.training-course {
+    width: 170px !important;
+  }
+  div.training-course header.course-theme {
+    width: 170px !important;
+    height: 170px !important;
+  }
+  div.training-course header.course-theme img {
+    transform: scale(0.7);
+  }
+  div.training-course p.course-name {
+    font-size: 0.875em !important;
+    margin-bottom: 15px !important;
+  }
+  div.training-course p.course-time {
+    margin-bottom: 15px !important;
+  }
+}
+header.page-header {
+  padding: 30px 0;
+}
+header.page-header div.page-header-inside {
+  display: flex;
+  align-items: center;
+}
+
+div.header-logo {
+  display: inline-block;
+}
+div.header-logo a {
+  margin-right: 52px;
+  font-family: "Product Sans Regular";
+  font-weight: bold;
+  font-size: 1.625em;
+}
+
+nav.header-nav {
+  height: auto;
+  width: 70%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+nav.header-nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto Regular";
+  color: black;
+}
+nav.header-nav a:hover {
+  text-decoration: underline;
+}
+nav.header-nav div.dropdown {
+  position: relative;
+  padding: 10px 15px;
+}
+nav.header-nav div.dropdown a {
+  padding: 0;
+}
+nav.header-nav div.dropdown:hover {
+  border-color: black;
+}
+nav.header-nav div.dropdown:hover > div.dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+nav.header-nav div.dropdown div.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+nav.header-nav div.dropdown div.dropdown-content > a {
+  text-align: center;
+  padding: 10px 15px;
+  border: 3px solid transparent;
+}
+nav.header-nav div.dropdown div.dropdown-content > a:hover {
+  border-color: black;
+}
+
+div.header-certificate {
+  margin-left: auto;
+  width: 20%;
+  justify-content: space-between;
+  display: inline-flex;
+  align-items: center;
+}
+div.header-certificate p {
+  display: inline-flex;
+}
+div.header-certificate p span {
+  margin-left: 5px;
+  font-family: "Roboto Regular";
+}
+section.website-design {
+  background-image: linear-gradient(90deg, #FFFCEB, #EAFFFE);
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+section.website-design div.website-design-inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.website-design-text {
+  max-width: 400px;
+}
+div.website-design-text h1 {
+  font-family: "Product Sans Regular";
+  font-size: 3.5em;
+  line-height: 68px;
+  margin-bottom: 25px;
+}
+div.website-design-text p {
+  font-family: "Roboto Regular";
+  font-size: 1.125em;
+  line-height: 25px;
+  margin-bottom: 60px;
+}
+div.website-design-image {
+  position: relative;
+}
+div.website-design-image :not(.main-image) {
+  position: absolute;
+}
+div.website-design-image .main-image {
+  z-index: 2;
+  position: relative;
+}
+div.website-design-image .turqoise-grid {
+  top: 90%;
+  left: 90%;
+}
+div.website-design-image .turqoise-zigzag {
+  top: 70%;
+  left: -10%;
+}
+div.website-design-image .marzipan-grid {
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+div.website-design-image .marzipan-zigzag {
+  top: 72%;
+  left: -12%;
+}
+div.website-design-image .malibu-x {
+  top: 55%;
+  left: -10%;
+}
+div.website-design-image .malibu-circle {
+  top: 55%;
+  right: -10%;
+}
+
+section.message {
+  padding-bottom: 100px;
+  padding-top: 180px;
+}
+section.message div.message-inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.message-image {
+  display: inline-block;
+  position: relative;
+}
+div.message-image :not(.director-image) {
+  position: absolute;
+}
+div.message-image .director-image {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+div.message-image .gradient-block {
+  top: -80px;
+  left: 80px;
+  z-index: 1;
+}
+div.message-image .white-grid {
+  right: -40px;
+  top: -40px;
+  z-index: 2;
+}
+
+div.message-text {
+  display: inline-block;
+  max-width: 500px;
+}
+div.message-text h1 {
+  font-family: "Roboto Regular";
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+div.message-text .hi-p {
+  font-family: "Roboto Regular";
+  font-size: 1.125em;
+  line-height: 1.39;
+  margin-bottom: 12px;
+}
+div.message-text .customer-p {
+  font-family: "Roboto Regular";
+  font-size: 0.875em;
+  line-height: 1.4;
+  opacity: 0.5;
+  margin-bottom: 25px;
+}
+div.message-text .read-more-link {
+  font-family: "Roboto Regular";
+  font-size: 1em;
+  position: relative;
+}
+div.message-text .read-more-link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(90deg, #84EEEB, #CCD1FF);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+div.message-text .read-more-link:hover::before {
+  opacity: 1;
+}
+
+section.upcoming-training {
+  padding-bottom: 100px;
+}
+
+header.upcoming-training-header {
+  font-family: "Roboto Regular";
+  font-size: 2em;
+  font-weight: normal !important;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+div.training-courses {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.training-course {
+  display: inline-block;
+}
+div.training-course header.course-theme {
+  width: 260px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+div.training-course .oracle {
+  background: #fff5f6;
+}
+div.training-course .python {
+  background: #fffceb;
+}
+div.training-course .android {
+  background: #ebfff4;
+}
+div.training-course .cisco {
+  background: #fff5f6;
+}
+div.training-course p.course-name {
+  font-family: "Roboto Regular";
+  font-size: 1.125em;
+  line-height: 1.5;
+  max-width: 200px;
+  margin-bottom: 35px;
+}
+div.training-course p.course-time {
+  font-family: "Roboto Regular";
+  font-size: 0.875em;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+div.training-course p.course-time span {
+  display: block;
+}
+div.training-course p.course-fee {
+  font-family: "Roboto Regular";
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

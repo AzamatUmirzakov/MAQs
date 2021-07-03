@@ -1,0 +1,86 @@
+header.page-header {
+  padding: 30px 0;
+  div.page-header-inside {
+    display: flex;
+    align-items: center;
+  }
+}
+
+div.header-logo {
+  display: inline-block;
+
+  a {
+    margin-right: 52px;
+    @extend %gradient-text;
+    font-family: "Product Sans Regular";
+    font-weight: bold;
+    font-size: 1.625em;
+  }
+}
+
+nav.header-nav {
+  height: auto;
+  width: 70%;
+  display: inline-flex;
+  justify-content: space-between;
+
+  a {
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto Regular";
+    color: black;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  div.dropdown {
+    position: relative;
+    padding: 10px 15px;
+    a {
+      padding: 0;
+    }
+    &:hover {
+      border-color: black;
+      & > div.dropdown-content {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    div.dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      display: none;
+      & > a {
+        text-align: center;
+        padding: 10px 15px;
+        border: 3px solid transparent;
+        &:hover {
+          border-color: black;
+        }
+      }
+    }
+  }
+}
+
+div.header-certificate {
+  // justify-self: flex-end;
+  margin-left: auto;
+  width: 20%;
+  justify-content: space-between;
+  display: inline-flex;
+  align-items: center;
+  p {
+    display: inline-flex;
+    span {
+      margin-left: 5px;
+      font-family: "Roboto Regular";
+    }
+  }
+  a.login-button {
+    @extend %gradient-button;
+  }
+}
